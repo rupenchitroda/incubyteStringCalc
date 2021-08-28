@@ -37,4 +37,14 @@ public class testCases {
     public void test_should_return_passed_string(){
         assertEquals(1, simpleCalc.add("1"));
     }
+
+    @Test
+    /**
+     * testing for two input, should return sum of that two number
+     * @param string x, string y
+     * @return int sum
+     */
+    public void test_should_return_sum_of_two_numbers(){
+        assertEquals(3, simpleCalc.add("1,2"));
+    }
 }
