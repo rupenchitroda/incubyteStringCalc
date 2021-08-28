@@ -28,5 +28,13 @@ public class testCases {
 		assertEquals(0, simpleCalc.add(""));
 	}
 
-
+    @Test
+    /**
+     * testing for one input, should return number itself
+     * @param string x
+     * @return int x
+     */
+    public void test_should_return_passed_string(){
+        assertEquals(1, simpleCalc.add("1"));
+    }
 }
