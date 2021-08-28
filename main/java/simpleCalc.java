@@ -1,7 +1,7 @@
 package main.java;
 
 public class simpleCalc {
-    public static int add(String numbers){
+    public static int add(String numbers) throws Exception{
         if(numbers.equals(""))
             return 0;
         else if(numbers.contains(",") || numbers.contains("\n")){
@@ -11,12 +11,13 @@ public class simpleCalc {
         return Integer.parseInt(numbers);
     }
 
-    private static int helper(String str){
+    private static int helper(String str) throws Exception{
         
         String deli = ",|\n";
         String[] nums = str.split(deli);
         char[] arr;
         int ans=0;
+        String neg = "";
 
         if(nums[0].contains("//")){
             arr = nums[0].toCharArray();
@@ -26,13 +27,24 @@ public class simpleCalc {
                 String[] stringDeli = nums[i].split(deli);
 
 				for(int j=0; j<stringDeli.length;j++)
-					ans += Integer.parseInt(stringDeli[j]);
+                {
+                    if(Integer.parseInt(stringDeli[j]) < 0)
+						neg += stringDeli[j];
+                    else
+					    ans += Integer.parseInt(stringDeli[j]);
+                }
             }
         } else {
             for(int i=0; i<nums.length; i++){
-                ans += Integer.parseInt(nums[i]);
+                if(Integer.parseInt(nums[i]) < 0)
+                    neg += nums[i];
+                else
+                    ans += Integer.parseInt(nums[i]);
             }
         }
+
+        if(!neg.equals(""))
+            throw new Exception("Negatives number(s) detected"+neg);
 
         return ans;
     }

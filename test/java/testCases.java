@@ -22,7 +22,7 @@ public class testCases {
      * @param void
      * @return null
      */
-	public void testEmptyString() {
+	public void testEmptyString() throws Exception {
 		assertEquals(0, simpleCalc.add(""));
 	}
 
@@ -32,7 +32,7 @@ public class testCases {
      * @param string x
      * @return int x
      */
-    public void test_should_return_passed_string(){
+    public void test_should_return_passed_string()throws Exception {
         assertEquals(1, simpleCalc.add("1"));
     }
 
@@ -42,7 +42,7 @@ public class testCases {
      * @param string x
      * @return int sum
      */
-    public void test_should_return_sum_of_two_numbers(){
+    public void test_should_return_sum_of_two_numbers()throws Exception {
         assertEquals(3, simpleCalc.add("1,2"));
     }
 
@@ -52,12 +52,12 @@ public class testCases {
      * @param string x
      * @return int sum
      */
-    public void test_should_return_sum_of_multiple_inputs(){
+    public void test_should_return_sum_of_multiple_inputs() throws Exception {
         assertEquals(3, simpleCalc.add("1,1,1"));
     }
 
     @Test
-    public void test_should_return_sum_of_multiple_inputs_newline(){
+    public void test_should_return_sum_of_multiple_inputs_newline() throws Exception {
         assertEquals(9, simpleCalc.add("3\n3,3"));
     }
 
@@ -68,12 +68,27 @@ public class testCases {
      * @param string x
      * @return int sum
      */
-    public void test_should_return_sum_of_multiple_inputs_even_with_multiple_deleimeters(){
+    public void test_should_return_sum_of_multiple_inputs_even_with_multiple_deleimeters() throws Exception {
         assertEquals(3, simpleCalc.add("//;\n1;2"));
     }
 
     @Test
-    public void test_should_return_sum_of_multiple_inputs_even_with_different_deleimeters(){
+    public void test_should_return_sum_of_multiple_inputs_even_with_different_deleimeters() throws Exception {
         assertEquals(15, simpleCalc.add("//!\n1!2!3!4!5"));
+    }
+
+    @Test
+    /**
+     * testing for negative inputs , should throws a exception
+     * @param string x
+     * @return error
+     */
+    public void test_should_not_accept_negatives() throws Exception {
+        try{
+            int ans = simpleCalc.add("-1");
+
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
