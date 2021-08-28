@@ -6,7 +6,12 @@ public class simpleCalc {
             return 0;
         else if(numbers.contains(",")){
             String[] num = numbers.split(",");
-            return Integer.parseInt(num[0]) + Integer.parseInt(num[1]);
+            int ans = 0;
+            for(int i=0; i<num.length; i++){
+                ans+=Integer.parseInt(num[i]);
+            }
+
+            return ans;
         }
 
         return 0;

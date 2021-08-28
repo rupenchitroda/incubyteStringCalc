@@ -41,10 +41,20 @@ public class testCases {
     @Test
     /**
      * testing for two input, should return sum of that two number
-     * @param string x, string y
+     * @param string x
      * @return int sum
      */
     public void test_should_return_sum_of_two_numbers(){
         assertEquals(3, simpleCalc.add("1,2"));
+    }
+
+    @Test
+    /**
+     * testing for multiple inputs, should return sum of that all numbers
+     * @param string x
+     * @return int sum
+     */
+    public void test_should_return_sum_of_multiple_inputs(){
+        assertEquals(3, simpleCalc.add("1,1,1"));
     }
 }
