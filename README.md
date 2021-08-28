@@ -1,1 +1,1 @@
-# incubyteStringCalc
+# String Calculator Kata
