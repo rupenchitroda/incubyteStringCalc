@@ -11,11 +11,9 @@ public class testCases {
         org.junit.runner.JUnitCore.main("test.java.testCases");
     }
 
-    private simpleCalc calc;
-
     @Before
     public void setUp(){
-        calc = new simpleCalc();
+        new simpleCalc();
     }
 
     @Test
@@ -57,10 +55,20 @@ public class testCases {
     public void test_should_return_sum_of_multiple_inputs(){
         assertEquals(3, simpleCalc.add("1,1,1"));
     }
-    
+
     @Test
     public void test_should_return_sum_of_multiple_inputs_newline(){
         assertEquals(9, simpleCalc.add("3\n3,3"));
     }
-  
+
+
+    @Test
+    /**
+     * testing for multiple inputs as well as delimeters, should return sum of that all numbers
+     * @param string x
+     * @return int sum
+     */
+    public void test_should_return_sum_of_multiple_inputs_even_with_multiple_deleimeters(){
+        assertEquals(3, simpleCalc.add("//;\n1;2"));
+    }
 }
