@@ -55,7 +55,12 @@ public class testCases {
      * @return int sum
      */
     public void test_should_return_sum_of_multiple_inputs(){
-        assertEquals(3, simpleCalc.add("1\n1,1"));
+        assertEquals(3, simpleCalc.add("1,1,1"));
+    }
+    
+    @Test
+    public void test_should_return_sum_of_multiple_inputs_newline(){
+        assertEquals(9, simpleCalc.add("3\n3,3"));
     }
   
 }
