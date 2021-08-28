@@ -91,4 +91,15 @@ public class testCases {
             System.out.println(e.getMessage());
         }
     }
+
+    @Test
+
+    public void test_should_not_accept_multiples_negatives() throws Exception {
+        try{
+            int ans = simpleCalc.add("-1-2-3");
+
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
