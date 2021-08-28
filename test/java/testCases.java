@@ -85,7 +85,7 @@ public class testCases {
      */
     public void test_should_not_accept_negatives() throws Exception {
         try{
-            int ans = simpleCalc.add("-1");
+            simpleCalc.add("-1");
 
         } catch (Exception e){
             System.out.println(e.getMessage());
@@ -95,7 +95,7 @@ public class testCases {
     @Test
     public void test_should_not_accept_multiples_negatives() throws Exception {
         try{
-            int ans = simpleCalc.add("-1-2-3");
+            simpleCalc.add("-1-2-3");
 
         } catch (Exception e){
             System.out.println(e.getMessage());
