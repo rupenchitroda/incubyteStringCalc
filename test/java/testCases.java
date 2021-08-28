@@ -71,4 +71,9 @@ public class testCases {
     public void test_should_return_sum_of_multiple_inputs_even_with_multiple_deleimeters(){
         assertEquals(3, simpleCalc.add("//;\n1;2"));
     }
+
+    @Test
+    public void test_should_return_sum_of_multiple_inputs_even_with_different_deleimeters(){
+        assertEquals(15, simpleCalc.add("//!\n1!2!3!4!5"));
+    }
 }
