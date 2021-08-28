@@ -39,12 +39,13 @@ public class simpleCalc {
                 if(Integer.parseInt(nums[i]) < 0)
                     neg += nums[i];
                 else
-                    ans += Integer.parseInt(nums[i]);
+                    if(Integer.parseInt(nums[i]) < 1000)
+                        ans += Integer.parseInt(nums[i]);
             }
         }
 
         if(!neg.equals(""))
-            throw new Exception("Negatives number(s) detected"+neg);
+            throw new Exception("negatives not allowed"+neg);
 
         return ans;
     }

@@ -93,7 +93,6 @@ public class testCases {
     }
 
     @Test
-
     public void test_should_not_accept_multiples_negatives() throws Exception {
         try{
             int ans = simpleCalc.add("-1-2-3");
@@ -102,4 +101,15 @@ public class testCases {
             System.out.println(e.getMessage());
         }
     }
+
+    @Test
+    /**
+     * testing for values which are >1000, that number should be ignored
+     * @param string x
+     * @return sum y
+     */
+    public void test_should_not_accept_values_greater_than_1000() throws Exception {
+        assertEquals(2, simpleCalc.add("1000,2"));
+    }
+
 }
