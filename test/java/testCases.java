@@ -18,4 +18,6 @@ public class testCases {
 	public void testEmptyString() {
 		assertEquals(0, simpleCalc.add(""));
 	}
+
+    
 }
