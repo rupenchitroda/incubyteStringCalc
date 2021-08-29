@@ -16,4 +16,4 @@ Repo contains two folders, [main](main/java) folder consists logic for calculato
 
 ## Files
 - [simpleCalc.java](main/java/simpleCalc.java) : this file contains logic for add method of the calculator
-- [testCases.java](test/java/testCases.java) : this file contains 
+- [testCases.java](test/java/testCases.java) : this file contains test cases to be tested for add method in simpleCalc.java file
