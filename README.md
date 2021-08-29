@@ -1,7 +1,7 @@
 # String Calculator Kata
 
-### Name : Rupen Chitroda
-### Applying for role : Full Stack Developer
+**Name : Rupen Chitroda**
+**Applying for role : Full Stack Developer**
 
 ## Description 
 This repository contains the implementation of exercise mentioned at [osherove.com](https://osherove.com/tdd-kata-1). This program is developed in java using Test Driven Development Approach. 
