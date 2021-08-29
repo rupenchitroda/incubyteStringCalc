@@ -11,7 +11,7 @@ For implementing unit testing, I've used Java's **junit** library which is used 
 
 Here I have used org.junit pacakage, which contains interfaces and classes which we will need to use methods like assertEqual, Assert and annotations like @Before, @Test.
 
-Repo contains two folders, [main](https://github.com/rupenchitroda/incubyteStringCalc/tree/main/main/java) folder consists logic for calculator's add function and the [test](https://github.com/rupenchitroda/incubyteStringCalc/tree/main/test/java) folder consists of test cases which are tested during development of this program.
+Repo contains two folders, [main](main/java/) folder consists logic for calculator's add function and the [test](test/java) folder consists of test cases which are tested during development of this program.
 
 ## Files
 - simpleCalc.java : this file contains logic for add method of the calculator
