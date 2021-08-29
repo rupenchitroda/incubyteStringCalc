@@ -1,6 +1,6 @@
 # String Calculator Kata
 
-**Name : Rupen Chitroda**
+**Name : Rupen Chitroda** <br/>
 **Applying for role : Full Stack Developer**
 
 ## Description 
